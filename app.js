@@ -2,10 +2,11 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const Blog = require("./Models/blog");
+require('dotenv').config();
 
 const app = express();
 
-const dbUri = 'mongodb+srv://zain:playstation123@blog.lcn4e.mongodb.net/blog-data?retryWrites=true&w=majority&appName=blog';
+const dbUri = process.env.MONGO_URI;
 const port = process.env.PORT || 3000; 
 mongoose.connect(dbUri)
   .then((result) => app.listen(port))
