@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zippy | <%= title %></title>
+    <link rel="stylesheet" href="/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Danfo&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // JavaScript to toggle sidebar
+      function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      }
+    </script>
+  </head>
+
+  <body>
+        <!-- Regular Menu for Larger Screens -->
+        <%- include ('./partials/nav.ejs')%>
+
+      <!-- Sidebar for Mobile Menu -->
+      <%- include ('./partials/sidebar.ejs')%>
+
+      
+
+    <!--Blog Section-->
+    <%-include ('./partials/blog.ejs')%>
+
+    <!--footer Partial -->
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

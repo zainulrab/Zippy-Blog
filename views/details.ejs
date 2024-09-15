@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zippy | <%= title %></title>
+  <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-8">
+    <nav class="flex justify-center space-x-4 mb-8">
+      <a href="/" class="text-blue-500 hover:underline">Home</a>
+      <a href="/about" class="text-blue-500 hover:underline">About</a>
+      <a href="/create/blog" class="text-blue-500 hover:underline">Create Blog</a>
+    </nav> 
+
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <h2 class="text-3xl font-bold mb-4"><%= blog.title %></h2>
+      <p class="text-gray-700 mb-6"><%= blog.body %></p>
+      <a href="#" class="text-red-500 hover:underline delete" data-id="<%= blog._id %>">Delete Blog</a>
+    </div>
+
+    <script>
+      const trashcan = document.querySelector('a.delete');
+      trashcan.addEventListener('click', (e) => {
+        e.preventDefault();
+        const endpoint = `/blogs/${trashcan.dataset.id}`;
+        
+        fetch(endpoint, { method: 'DELETE' })
+          .then(res => res.json())
+          .then(data => window.location.href = data.redirect)
+          .catch(err => console.log(err));
+      });
+    </script>
+  </div>  
+</body>
+</html>

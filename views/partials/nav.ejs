@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <div class="box bg-blue-500">
+        <nav class="flex items-center justify-between">
+          <div class="logo font-danfo text-4xl font-bold mx-20 my-8 text-white">
+            <a href="/">Zippy</a>
+          </div>
+  
+          <!-- Hamburger Menu Icon -->
+          <div class="sm:hidden mx-8">
+            <button
+              id="hamburger"
+              class="text-white focus:outline-none"
+              onclick="toggleMenu()"
+            >
+              <!-- Hamburger icon (3 bars) -->
+              <svg
+                class="w-8 h-8"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+    
+    <div class="hidden sm:flex flex-grow justify-center text-white">
+        <a href="/" class="relative mx-4 text-white group">
+          <span class="relative z-10">Home</span>
+          <span
+            class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"
+          ></span>
+        </a>
+        <a href="/about" class="relative mx-4 text-white group">
+          <span class="relative z-10">About</span>
+          <span
+            class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"
+          ></span>
+        </a>
+        <a href="/create/blog" class="relative mx-4 text-white group">
+          <span class="relative z-10">Create Blog</span>
+          <span
+            class="absolute inset-x-0 -bottom-0.5 h-0.5 bg-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100"
+          ></span>
+        </a>
+      </div>
+    </nav>
+    <div class="heading text-center py-8">
+        <h1 class="text-white text-5xl font-bold">Welcome to Zippy!</h1>
+        <p class="text-white text-lg my-5">All News about tech in one place.</p>
+      </div>
+</div>
+</body>
+</html>

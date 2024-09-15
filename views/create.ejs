@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zippy | <%= title %></title>
+  <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-8">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold">Create Your Blog</h1>
+    </header>
+
+    <div class="max-w-md mx-auto">
+      <form action="/Blogs" method="POST" class="space-y-6 bg-white p-6 rounded-lg shadow-lg">
+        <div>
+          <label for="title" class="block text-lg font-medium text-gray-700">Blog Title</label>
+          <input type="text" id="title" name="title" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-indigo-200" required>
+        </div>
+        <div>
+          <label for="body" class="block text-lg font-medium text-gray-700">Blog Content</label>
+          <textarea name="body" id="body" class="mt-1 p-2 w-full border border-gray-300 rounded-md focus:ring focus:ring-indigo-200" required></textarea>
+        </div>
+        <button class="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Submit</button>
+      </form>
+    </div>
+
+    <nav class="flex justify-center space-x-4 mt-8">
+      <a href="/" class="text-blue-500 hover:underline">Home</a>
+      <a href="/about" class="text-blue-500 hover:underline">About</a>
+      <a href="/create/blog" class="text-blue-500 hover:underline">Create Blog</a>
+    </nav>        
+  </div>  
+</body>
+</html>
