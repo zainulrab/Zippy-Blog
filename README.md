@@ -55,7 +55,7 @@ To get started with Zippy Blog, follow these steps:
 
     Using node:
     ```bash
-    node app
+    npm start
     ```
     Using nodemon:
    ```bash
